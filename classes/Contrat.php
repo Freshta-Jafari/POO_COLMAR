@@ -4,7 +4,7 @@ class Contrat {
 
     private Entreprise $entreprise;
     private Employe $employe;
-    private DataTime $dataEmbauche;
+    private DateTime $dataEmbauche;
     private string $typecontrat;
 
     public function __construct(Entreprise $entreprise, Employe $employe, string $dataEmbauche, string $typecontrat) {
@@ -14,9 +14,6 @@ class Contrat {
         $this->entreprise->addContrat($this);
         $this->employe->addContrat($this);
         $this->typecontrat = $typecontrat;
-
-       
-       
     }
 
     public function getEntreprise(): Entreprise

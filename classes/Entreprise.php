@@ -38,9 +38,9 @@ class Entreprise {
         return $this->dateCtreation;
     }
 
-    public function setDateCteations(DateTime $dateCteations): self
+    public function setDateCteations(DateTime $dateCtreation): self
     {
-        $this->dateCteations = $dateCteations;
+        $this->dateCtreation = $dateCtreation;
 
         return $this;
     }
@@ -108,7 +108,7 @@ class Entreprise {
         $rusalt = "<h2>Employes de $this </h2>";
 
         foreach($this -> contrats as $contrat){
-            $rusalt .= $contrat->getEmploye() . "(" . $contrat->getDataEmbauche() . "en" .$contrat->getTypeContrat(). ") <br>" ;
+            $rusalt .= $contrat->getEmploye() . "(" . $contrat->getDataEmbauche() . " en " .$contrat->getTypeContrat(). ") <br>" ;
         }
         return $rusalt;
     }
