@@ -108,7 +108,8 @@ class Entreprise {
         $rusalt = "<h2>Employes de $this </h2>";
 
         foreach($this -> contrats as $contrat){
-            $rusalt .= $contrat->getEmploye() . "(" . $contrat->getDataEmbauche() . " en " .$contrat->getTypeContrat(). ") <br>" ;
+            $rusalt .= $contrat->getEmploye() . "(" . $contrat->getDataEmbauche() . " en " 
+            .$contrat->getTypeContrat(). ") <br>" ;
         }
         return $rusalt;
     }
