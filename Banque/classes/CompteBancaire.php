@@ -34,7 +34,7 @@ class CompteBancaire {
 
     public function setSold(float $solde): self
     {
-        $this->sold = $solde;
+        $this->solde = $solde;
 
         return $this;
     }
@@ -84,7 +84,8 @@ class CompteBancaire {
     }
 
     public function afficherInformations() {
-        echo "Compte: {$this->libelle}, Solde: {$this->solde} {$this->devise}, Titulaire: {$this->titulaire->getPrenom()} {$this->titulaire->getNom()}\n";
+        echo "<li>{$this->libelle}: {$this->solde} {$this->devise} (Titulaire:
+         {$this->titulaire->getPrenom()} {$this->titulaire->getNom()})</li>";
     }
 
 public function __toString(){

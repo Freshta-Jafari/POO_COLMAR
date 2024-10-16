@@ -86,11 +86,19 @@ class Titulaire {
     }
 
     public function afficherInformations() {
-        echo "{$this->prenom} {$this->nom}, {$this->age()} ans, {$this->ville}\nComptes :<br>";
-        foreach ($this->comptes as $compte) {
-            echo " - {$compte->getLibelle()}: {$compte->getSolde()} {$compte->getDevise()}<br>";
+        echo "{$this->prenom} {$this->nom}, {$this->age()} ans, {$this->ville} <br> Comptes :";
+        
+        if (!empty($this->comptes)) {
+            echo "<ul>";
+            foreach ($this->comptes as $compte) {
+                $compte->afficherInformations();
+            }
+            echo "</ul>";
+        } else {
+            echo "Aucun compte disponible.<br>";
         }
     }
+    
 
     public function __toString(){
         return $this -> prenom . " " . $this -> nom;
